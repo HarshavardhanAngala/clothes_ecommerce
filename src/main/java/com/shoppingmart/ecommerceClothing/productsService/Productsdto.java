@@ -1,6 +1,5 @@
 package com.shoppingmart.ecommerceClothing.productsService;
 
-import com.shoppingmart.ecommerceClothing.BookingServices.BookingDto;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

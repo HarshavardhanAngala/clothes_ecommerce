@@ -1,5 +1,6 @@
 package com.shoppingmart.ecommerceClothing.productsService;
 
+import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -18,4 +19,7 @@ private ProductRepo productsrepo;
     }
     
 
+    public Optional<Productsdto> getProductsdto(int i ){
+        return productsrepo.findById(i);
+    }
 }

@@ -1,6 +1,10 @@
 package com.shoppingmart.ecommerceClothing.productsService;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,5 +20,9 @@ public class ProductsController {
     public String  saveProductsController(@RequestBody Productsdto productsdto){
     return productService.saveProductsService(productsdto);
 } 
+   @GetMapping("/getproduc/{i}")
+    public Optional<Productsdto> getProductsdto(@PathVariable int i){
+        return productService.getProductsdto(i);
+    }
 
 }
